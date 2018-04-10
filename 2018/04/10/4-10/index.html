@@ -8,6 +8,46 @@
 
 <html class="theme-next pisces use-motion" lang="">
 <head>
+   $(document).ready(function () {
+    var SelectText = function(element) {
+        var doc = document
+            , text = element
+            , range, selection
+        ;    
+        if (doc.body.createTextRange) {
+            range = document.body.createTextRange();
+            range.moveToElementText(text);
+            range.select();
+        } else if (window.getSelection) {
+            selection = window.getSelection();        
+            range = document.createRange();
+            range.selectNodeContents(text);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        }
+    };
+
+    $(".code").each(function() {
+        var code = $(this).get(0);
+        var button_html = 
+            '<div style="position: fixed;'                                                               +
+                        'right: 3%;'                                                                     +
+                        'margin-top: 5px;'                                                               +
+                        'font-family: consolas, Menlo, \'PingFang SC\', \'Microsoft YaHei\', monospace;' +
+                        'font-size: 10px;'                                                               +
+                        'cursor: pointer;'                                                               +
+                        'color: #e31436;'                                                                +
+                        '">'                                                                             +
+            '<span>全选</span>'                                                                          +
+            '</div>';
+        var button = $(button_html);
+
+        $(button).click(function() {
+            SelectText(code);
+        });
+        $(button).insertBefore(this);
+    });
+});
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -80,19 +120,19 @@
 
 
 
-<meta name="description" content="Hexo的疑难杂症  Author-Zsy     一.Hexo next 头像设置   今天上午搞了好久的Hexo头像问题，刚开始没仔细看调试，以为是自己load的图片保存目录有问题，试了很多次，都不行，后来添加以下命令:Hexo s –debug可以看到运行的具体过程，发现显示如下错误：config.yml file load failed有经验的都知道，这种错误是往往是空格导致，比如以下示">
+<meta name="description" content="Hexo的疑难杂症  Author-Zsy       一.Hexo next 头像设置    今天上午搞了好久的Hexo头像问题，刚开始没仔细看调试，以为是自己load的图片保存目录有问题，试了很多次，都不行，后来添加以下命令:Hexo s –debug可以看到运行的具体过程，发现显示如下错误：config.yml file load failed有经验的都知道，这种错误是往往是空格导致，比如">
 <meta property="og:type" content="article">
 <meta property="og:title" content="4.1">
 <meta property="og:url" content="http://yoursite.com/2018/04/10/4-10/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Hexo的疑难杂症  Author-Zsy     一.Hexo next 头像设置   今天上午搞了好久的Hexo头像问题，刚开始没仔细看调试，以为是自己load的图片保存目录有问题，试了很多次，都不行，后来添加以下命令:Hexo s –debug可以看到运行的具体过程，发现显示如下错误：config.yml file load failed有经验的都知道，这种错误是往往是空格导致，比如以下示">
+<meta property="og:description" content="Hexo的疑难杂症  Author-Zsy       一.Hexo next 头像设置    今天上午搞了好久的Hexo头像问题，刚开始没仔细看调试，以为是自己load的图片保存目录有问题，试了很多次，都不行，后来添加以下命令:Hexo s –debug可以看到运行的具体过程，发现显示如下错误：config.yml file load failed有经验的都知道，这种错误是往往是空格导致，比如">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.imgur.com/TilHNMo.png">
 <meta property="og:image" content="https://i.imgur.com/ninYoxf.png">
-<meta property="og:updated_time" content="2018-04-10T11:34:38.541Z">
+<meta property="og:updated_time" content="2018-04-10T11:38:07.723Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="4.1">
-<meta name="twitter:description" content="Hexo的疑难杂症  Author-Zsy     一.Hexo next 头像设置   今天上午搞了好久的Hexo头像问题，刚开始没仔细看调试，以为是自己load的图片保存目录有问题，试了很多次，都不行，后来添加以下命令:Hexo s –debug可以看到运行的具体过程，发现显示如下错误：config.yml file load failed有经验的都知道，这种错误是往往是空格导致，比如以下示">
+<meta name="twitter:description" content="Hexo的疑难杂症  Author-Zsy       一.Hexo next 头像设置    今天上午搞了好久的Hexo头像问题，刚开始没仔细看调试，以为是自己load的图片保存目录有问题，试了很多次，都不行，后来添加以下命令:Hexo s –debug可以看到运行的具体过程，发现显示如下错误：config.yml file load failed有经验的都知道，这种错误是往往是空格导致，比如">
 <meta name="twitter:image" content="https://i.imgur.com/TilHNMo.png">
 
 
@@ -350,9 +390,10 @@
 
       
         <hr>
-<center><font size="5"><strong>Hexo的疑难杂症</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
+<center><font size="5"><strong>Hexo的疑难杂症</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center>   
 
-<p><strong>一.Hexo next 头像设置</strong>  </p>
+<font size="4"><strong>一.Hexo next 头像设置</strong> </font> 
+
 <font color="#000000" size="4">今天上午搞了好久的Hexo头像问题，刚开始没仔细看调试，以为是自己load的图片保存目录有问题，试了很多次，都不行，后来添加以下命令:<br><code>Hexo s –debug</code><br>可以看到运行的具体过程，发现显示如下错误：<br><code>config.yml file load failed</code><br>有经验的都知道，这种错误是往往是空格导致，比如以下示例：<br><code>avatar:（此处应有一个空格）/images/avatar.gif</code><br>但是我确定我的格式是这样的，后来多次尝试才发现，这样的空格格式也不对，如下图所示：<br><img src="https://i.imgur.com/TilHNMo.png" alt=""><br>红色标注处不应该空格，要顶格，但是这种是否顶格不是固定的，要看上面格式，保持一致就可以了，如下：<br><img src="https://i.imgur.com/ninYoxf.png" alt=""><br>这种就不用顶格，否则会报错。<br><br><strong>二.Hexo next 动态背景设置</strong><br><br>网上有很多教程讲如何设置动态背景，我基本都看了，因此也有个总结，之所以看，是因为遇到了一些问题。<br>我的问题是按照网上教程配置，不出效果，检查了很久，才解决这个问题。<br>无论是高版本(以5.1.4为标准）还是低一点的版本，都需要配置两个文件，一个是layout.swing（主题文件夹themes\next\layout)和主题文件config.yml,唯一可能有区别的就是低版本的config.yml要自己添加背景代码，高版本直接自己写true，但是layout.swing都要配置。<br>配置config.yml：找到canvas_nest(没有的在最后加）写true，下面的three_waves是另外的背景（注意能不能用最好打开注释的链接检查一下）；<br>配置layout.swing：这里一定要注意判断语句的判断条件，都将代码添加到文档body的开始处：<br>低版本的判断配置语句如下<br><br>高版本的判断配置如下<br><br>两个唯一区别就是判断条件是否加了决定是否加vendors,是否加这个要看主题配置文件下的vendors是否与canvas_nest对齐，若对齐，则不加；否则加。<br>完整的代码网上一搜就能找到，这里只强调易错的地方。<br></font> 
       
     </div>
