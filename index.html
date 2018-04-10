@@ -8,46 +8,7 @@
 
 <html class="theme-next pisces use-motion" lang="">
 <head>
-   $(document).ready(function () {
-    var SelectText = function(element) {
-        var doc = document
-            , text = element
-            , range, selection
-        ;    
-        if (doc.body.createTextRange) {
-            range = document.body.createTextRange();
-            range.moveToElementText(text);
-            range.select();
-        } else if (window.getSelection) {
-            selection = window.getSelection();        
-            range = document.createRange();
-            range.selectNodeContents(text);
-            selection.removeAllRanges();
-            selection.addRange(range);
-        }
-    };
-
-    $(".code").each(function() {
-        var code = $(this).get(0);
-        var button_html = 
-            '<div style="position: fixed;'                                                               +
-                        'right: 3%;'                                                                     +
-                        'margin-top: 5px;'                                                               +
-                        'font-family: consolas, Menlo, \'PingFang SC\', \'Microsoft YaHei\', monospace;' +
-                        'font-size: 10px;'                                                               +
-                        'cursor: pointer;'                                                               +
-                        'color: #e31436;'                                                                +
-                        '">'                                                                             +
-            '<span>全选</span>'                                                                          +
-            '</div>';
-        var button = $(button_html);
-
-        $(button).click(function() {
-            SelectText(code);
-        });
-        $(button).insertBefore(this);
-    });
-});
+  
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -395,7 +356,7 @@
 
 <font size="4"><strong>一.Hexo next 头像设置</strong> </font> 
 
-<font color="#000000" size="4">今天上午搞了好久的Hexo头像问题，刚开始没仔细看调试，以为是自己load的图片保存目录有问题，试了很多次，都不行，后来添加以下命令:<br><code>Hexo s –debug</code><br>可以看到运行的具体过程，发现显示如下错误：<br><code>config.yml file load failed</code><br>有经验的都知道，这种错误是往往是空格导致，比如以下示例：<br><code>avatar:（此处应有一个空格）/images/avatar.gif</code><br>但是我确定我的格式是这样的，后来多次尝试才发现，这样的空格格式也不对，如下图所示：<br><img src="https://i.imgur.com/TilHNMo.png" alt=""><br>红色标注处不应该空格，要顶格，但是这种是否顶格不是固定的，要看上面格式，保持一致就可以了，如下：<br><img src="https://i.imgur.com/ninYoxf.png" alt=""><br>这种就不用顶格，否则会报错。<br><br><strong>二.Hexo next 动态背景设置</strong><br><br>网上有很多教程讲如何设置动态背景，我基本都看了，因此也有个总结，之所以看，是因为遇到了一些问题。<br>我的问题是按照网上教程配置，不出效果，检查了很久，才解决这个问题。<br>无论是高版本(以5.1.4为标准）还是低一点的版本，都需要配置两个文件，一个是layout.swing（主题文件夹themes\next\layout)和主题文件config.yml,唯一可能有区别的就是低版本的config.yml要自己添加背景代码，高版本直接自己写true，但是layout.swing都要配置。<br>配置config.yml：找到canvas_nest(没有的在最后加）写true，下面的three_waves是另外的背景（注意能不能用最好打开注释的链接检查一下）；<br>配置layout.swing：这里一定要注意判断语句的判断条件，都将代码添加到文档body的开始处：<br>低版本的判断配置语句如下<br><br>高版本的判断配置如下<br><br>两个唯一区别就是判断条件是否加了决定是否加vendors,是否加这个要看主题配置文件下的vendors是否与canvas_nest对齐，若对齐，则不加；否则加。<br>完整的代码网上一搜就能找到，这里只强调易错的地方。<br></font> 
+<font color="#000000" size="4">今天上午搞了好久的Hexo头像问题，刚开始没仔细看调试，以为是自己load的图片保存目录有问题，试了很多次，都不行，后来添加以下命令:<br><code>Hexo s –debug</code><br>可以看到运行的具体过程，发现显示如下错误：<br><code>config.yml file load failed</code><br>有经验的都知道，这种错误是往往是空格导致，比如以下示例：<br><code>avatar:（此处应有一个空格）/images/avatar.gif</code><br>但是我确定我的格式是这样的，后来多次尝试才发现，这样的空格格式也不对，如下图所示：<br><img src="https://i.imgur.com/TilHNMo.png" alt=""><br>红色标注处不应该空格，要顶格，但是这种是否顶格不是固定的，要看上面格式，保持一致就可以了，如下：<br><img src="https://i.imgur.com/ninYoxf.png" alt=""><br>这种就不用顶格，否则会报错。<br><br><strong>二.Hexo next 动态背景设置</strong><br><br>网上有很多教程讲如何设置动态背景，我基本都看了，因此也有个总结，之所以看，是因为遇到了一些问题。<br>我的问题是按照网上教程配置，不出效果，检查了很久，才解决这个问题。<br>无论是高版本(以5.1.4为标准）还是低一点的版本，都需要配置两个文件，一个是layout.swing（主题文件夹themes\next\layout)和主题文件config.yml,唯一可能有区别的就是低版本的config.yml要自己添加背景代码，高版本直接自己写true，但是layout.swing都要配置。<br>配置config.yml：找到canvas_nest(没有的在最后加）写true，下面的three_waves是另外的背景（注意能不能用最好打开注释的链接检查一下）；<br>配置layout.swing：这里一定要注意判断语句的判断条件，都将代码添加到文档body的开始处：<br>低版本的判断配置语句如下<br><code>% if theme.canvas_nest %</code><br>高版本的判断配置如下<br><code>% if theme.vendors.canvas_nest %</code><br>两个唯一区别就是判断条件是否加了决定是否加vendors,是否加这个要看主题配置文件下的vendors是否与canvas_nest对齐，若对齐，则不加；否则加。<br>完整的代码网上一搜就能找到，这里只强调易错的地方。<br></font> 
           
         
       
@@ -537,7 +498,7 @@
         
           
             <hr>
-<center><font size="6"><strong>清明</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
+<center><font size="5"><strong>清明</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
 
 
 <font color="#000000" size="4">今天是清明节，不知为什么我还是买了一个域名，主要想试试用域名是什么感觉的吧，至少访问起来比较快速一点吧，上午差点把我的向日葵幼苗给摔死，拿衣服不小心碰到了它的盆子，结果惨不忍睹，抢救了一下，应该可以继续吧，大兄弟，你可得挺住啊。<br><img src="https://i.imgur.com/WUuOCvb.jpg" alt=""><br><br>好吧，确实需要我帮它洗洗了。从养花多多少少就可以看出一个人的一些东西，我不是一个精致的人。</font> 
@@ -682,7 +643,7 @@
         
           
             <hr>
-<center><font size="6"><strong>Cadence</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
+<center><font size="5"><strong>Cadence</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
 
 <font color="#000000" size="4">记录一下Cadence导入库的步骤<br><br><img src="https://i.imgur.com/BC70H1U.png" alt=""><br><img src="https://i.imgur.com/T4cXdTL.png" alt=""><br><img src="https://i.imgur.com/T0HkFRr.png" alt=""><br><img src="https://i.imgur.com/eX5YRsD.png" alt=""><br><img src="https://i.imgur.com/vjKhnnI.png" alt=""><br></font> 
           
@@ -826,7 +787,7 @@
         
           
             <hr>
-<center><font size="6"><strong>Share</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
+<center><font size="5"><strong>Share</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
 
 
 <font color="#000000" size="4">上次写博客还是寒假前，如今已是阳春三月，不，对我来说确是寒冬腊月，因为自己这段时间太颓废了，坚持真的好难，慢慢朝着好习惯努力吧！<br></font> 
@@ -971,7 +932,7 @@
         
           
             <hr>
-<center><font size="6"><strong>团圆</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
+<center><font size="5"><strong>团圆</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
 
 <font color="#000000" size="4">今天很冷，十分冷，但是看到这张图片老远就能感受到一阵大家的热情。<br><img src="https://i.imgur.com/rJ8DWoL.jpg" alt=""><br>早该这样了。<br></font> 
           
@@ -1115,7 +1076,7 @@
         
           
             <hr>
-<center><font size="6"><strong>Share</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
+<center><font size="5"><strong>Share</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
 
 
 <font color="#000000" size="4">今天试了一下小米5x手机，手感很好，音乐还行（我对音质没什么要求），照片像素白天还可以（晚上没试，我对画质也没太高要求），王者荣耀游戏就那样，不如平板Ipad流畅（网速不影响的前提下）。<br></font> 
@@ -1262,7 +1223,7 @@
         
           
             <hr>
-<center><font size="6"><strong>Share</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
+<center><font size="5"><strong>Share</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
 
 
 <font color="#000000" size="4">今天分享一张图，一篇文章，希望对看到的人有所裨益。<br><img src="https://i.imgur.com/hk3ckCd.jpg" alt=""><br>自己读的书太少，很惭愧，自己以后会努力多读点书。<br>下面一个链接讲得是上大学的意义，已经征询过作者意见，同意转发:<br><a href="https://www.jianshu.com/p/b9d760b195cf" target="_blank" rel="noopener">https://www.jianshu.com/p/b9d760b195cf</a><br></font> 
@@ -1408,7 +1369,7 @@
         
           
             <hr>
-<center><font size="6"><strong>无题</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
+<center><font size="5"><strong>无题</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
 
 
 <font color="#000000" size="4">似乎今天过得很平淡，唯一不同的是最近这段时间心绪不宁，每当快要回家的时候，我内心就会很乱，原因我也知道。到今天才知道词不达意是一首歌的名字，Phoebe是老友记里面一个角色的名字。</font> 
@@ -1554,7 +1515,7 @@
         
           
             <hr>
-<center><font size="6"><strong>Altium Design15拐角模式切换</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
+<center><font size="5"><strong>Altium Design15拐角模式切换</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
 
 
 <font color="#000000" size="4">Altium Design15,在绘制原理图的时候，相信很多小伙伴都会遇到这样一个问题，快捷键：Shift+Space并没什么用，即使把键盘按坏，也没用，我就遇到这个问题了，经过一番摸索，终于解决了。解决办法如下：<br>选择你想要的线，点击鼠标左键，确定线的起点，然后拖动鼠标绘制线，在每个拐点都要点击确认，然后先点击Ctr+Shift+Space，这个时候再点击Shift+Space就可以自由切换拐角模式了。<br><img src="https://i.imgur.com/HayIBFP.png" alt=""><br>不多说了，帮人买一个小米5X手机，我得打开看看怎么样。<br><img src="https://i.imgur.com/jGubCnO.jpg" alt=""><br>放图为证，我是一个正经的人，不撒谎，也不吹牛。<br><br><img src="https://i.imgur.com/wuRbgye.jpg" alt=""><br>最后的最后，想说：祝你生日快乐！永远快乐！</font> 
@@ -1699,7 +1660,7 @@
         
           
             <hr>
-<center><font size="6"><strong>心情复杂的一天</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
+<center><font size="5"><strong>心情复杂的一天</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
 
 
 <font color="#000000" size="4">昨天装了一个软件——Altium Design15,在绘制原理图的时候，有的元件在软件自带的库中找不到，这里有一个库希望可以帮到大家：<br><a href="http://techdocs.altium.com/display/ADOH/Download+Libraries" target="_blank" rel="noopener">http://techdocs.altium.com/display/ADOH/Download+Libraries</a><br>打开页面如下：<br><img src="https://i.imgur.com/Qlsj1tj.png" alt=""><br>下载过程可能经常中断，用Chorm浏览器可能好一点；<br>今天中午一局黄金Ⅳ王者荣耀，可把我气坏了，后羿英雄使用者竟然拿我打野的一蓝，而且是我打得蓝奄奄一息，他上来直接射杀，然后上路不去守，跑去中路跟着妲己，最后导致中路被破两个塔，结果如何，当然是输了，其实我挺菜的，不然怎么连他都带不起来？<br>下午在简书上看到一篇文章，关于情感的，评论了一下，收到了文章作者的答复，于是聊了一下，得出一个结论：女生在感情方面很多时候比男生要冷静，而且更决绝。<br><img src="https://i.imgur.com/snh0TNu.jpg" alt=""><br>放图为证，我是一个正经的人，不撒谎，也不吹牛。</font> 

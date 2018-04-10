@@ -8,46 +8,7 @@
 
 <html class="theme-next pisces use-motion" lang="">
 <head>
-   $(document).ready(function () {
-    var SelectText = function(element) {
-        var doc = document
-            , text = element
-            , range, selection
-        ;    
-        if (doc.body.createTextRange) {
-            range = document.body.createTextRange();
-            range.moveToElementText(text);
-            range.select();
-        } else if (window.getSelection) {
-            selection = window.getSelection();        
-            range = document.createRange();
-            range.selectNodeContents(text);
-            selection.removeAllRanges();
-            selection.addRange(range);
-        }
-    };
-
-    $(".code").each(function() {
-        var code = $(this).get(0);
-        var button_html = 
-            '<div style="position: fixed;'                                                               +
-                        'right: 3%;'                                                                     +
-                        'margin-top: 5px;'                                                               +
-                        'font-family: consolas, Menlo, \'PingFang SC\', \'Microsoft YaHei\', monospace;' +
-                        'font-size: 10px;'                                                               +
-                        'cursor: pointer;'                                                               +
-                        'color: #e31436;'                                                                +
-                        '">'                                                                             +
-            '<span>全选</span>'                                                                          +
-            '</div>';
-        var button = $(button_html);
-
-        $(button).click(function() {
-            SelectText(code);
-        });
-        $(button).insertBefore(this);
-    });
-});
+  
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -128,7 +89,7 @@
 <meta property="og:description" content="清明  Author-Zsy      今天是清明节，不知为什么我还是买了一个域名，主要想试试用域名是什么感觉的吧，至少访问起来比较快速一点吧，上午差点把我的向日葵幼苗给摔死，拿衣服不小心碰到了它的盆子，结果惨不忍睹，抢救了一下，应该可以继续吧，大兄弟，你可得挺住啊。好吧，确实需要我帮它洗洗了。从养花多多少少就可以看出一个人的一些东西，我不是一个精致的人。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.imgur.com/WUuOCvb.jpg">
-<meta property="og:updated_time" content="2018-04-05T04:06:34.775Z">
+<meta property="og:updated_time" content="2018-04-10T11:52:29.234Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="4.5">
 <meta name="twitter:description" content="清明  Author-Zsy      今天是清明节，不知为什么我还是买了一个域名，主要想试试用域名是什么感觉的吧，至少访问起来比较快速一点吧，上午差点把我的向日葵幼苗给摔死，拿衣服不小心碰到了它的盆子，结果惨不忍睹，抢救了一下，应该可以继续吧，大兄弟，你可得挺住啊。好吧，确实需要我帮它洗洗了。从养花多多少少就可以看出一个人的一些东西，我不是一个精致的人。">
@@ -389,7 +350,7 @@
 
       
         <hr>
-<center><font size="6"><strong>清明</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
+<center><font size="5"><strong>清明</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
 
 
 <font color="#000000" size="4">今天是清明节，不知为什么我还是买了一个域名，主要想试试用域名是什么感觉的吧，至少访问起来比较快速一点吧，上午差点把我的向日葵幼苗给摔死，拿衣服不小心碰到了它的盆子，结果惨不忍睹，抢救了一下，应该可以继续吧，大兄弟，你可得挺住啊。<br><img src="https://i.imgur.com/WUuOCvb.jpg" alt=""><br><br>好吧，确实需要我帮它洗洗了。从养花多多少少就可以看出一个人的一些东西，我不是一个精致的人。</font> 

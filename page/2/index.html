@@ -8,46 +8,7 @@
 
 <html class="theme-next pisces use-motion" lang="">
 <head>
-   $(document).ready(function () {
-    var SelectText = function(element) {
-        var doc = document
-            , text = element
-            , range, selection
-        ;    
-        if (doc.body.createTextRange) {
-            range = document.body.createTextRange();
-            range.moveToElementText(text);
-            range.select();
-        } else if (window.getSelection) {
-            selection = window.getSelection();        
-            range = document.createRange();
-            range.selectNodeContents(text);
-            selection.removeAllRanges();
-            selection.addRange(range);
-        }
-    };
-
-    $(".code").each(function() {
-        var code = $(this).get(0);
-        var button_html = 
-            '<div style="position: fixed;'                                                               +
-                        'right: 3%;'                                                                     +
-                        'margin-top: 5px;'                                                               +
-                        'font-family: consolas, Menlo, \'PingFang SC\', \'Microsoft YaHei\', monospace;' +
-                        'font-size: 10px;'                                                               +
-                        'cursor: pointer;'                                                               +
-                        'color: #e31436;'                                                                +
-                        '">'                                                                             +
-            '<span>全选</span>'                                                                          +
-            '</div>';
-        var button = $(button_html);
-
-        $(button).click(function() {
-            SelectText(code);
-        });
-        $(button).insertBefore(this);
-    });
-});
+  
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -391,7 +352,7 @@
         
           
             <hr>
-<center><font size="6"><strong>Altium Design15 Win10 安装</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
+<center><font size="5"><strong>Altium Design15 Win10 安装</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
 
 
 <font color="#000000" size="4">今天装了一个软件——Altium Design15,可以制作PCB版图，在安装破解过程中，有一步是运行patch.exe，结果会弹出以下提示信息：<br><img src="https://i.imgur.com/OPxOlcA.png" alt=""><br>然后我就百度各种解决办法，有的说是系统问题，win10可能不支持，有的还说可能显卡有问题，驱动没装好，等等，找了好久，没有找到我想要的解决办法，想要的解决办法当然是简单，不用太折腾电脑，找了很久没找到，最后我就把他搁置一旁，大概等了1小时，重新破解，就不会出现这个问题了，哈哈，就是这么神奇，为了验证不是运气，别的小伙伴也可以试试，有答案告诉我一声。<br>PS:不支持盗版，有条件的同学希望去支持正版，没条件的同学现在先用盗版，等有钱了再去补偿，这样想心里或许会好过点，别问我为什么会知道。</font> 
@@ -536,7 +497,7 @@
         
           
             <hr>
-<center><font size="6"><strong>校园夜跑记事（一）</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center>  
+<center><font size="5"><strong>校园夜跑记事（一）</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center>  
 
 <font color="#000000" size="4">最近或许是因为放假的缘故吧，饮食有些不规律，尤其是晚上，总要到了8点左右才去吃，没办法，不饿也不能硬塞吧。吃了就回去歇了歇，差不多的时候就去跑了会步，严格是走了会路，不过我走路速度比较快，走在路上，想到一句台词，如果原本是两个好朋友，但后来因为一些事情产生了难以调和的矛盾，比如女生啦，等等，他们很久之后见面或者多年之后有人问起他们的关系，我觉得这样说比较形象，很多人认为我们的关系就像王者荣耀中的王者等级那么高，其实是错觉，仔细看，你会发现，关系级别只达到了黄金级别，但其实黄金的级别也不低。<br><img src="https://i.imgur.com/KjkrLYx.jpg" alt=""><br><img src="https://i.imgur.com/bLLXLz0.jpg" alt=""><br><br><br>随手一拍，不配图感觉像是在撒谎，我可是个正经的人。</font> 
 
@@ -680,7 +641,7 @@
       
         
           
-            <p><center><font size="6"><strong>基于Github的简易博客搭建</strong></font>  </center></p>
+            <p><center><font size="5"><strong>基于Github的简易博客搭建</strong></font>  </center></p>
 <p><center><font size="4"><strong>Author-Zsy</strong></font>  </center></p>
 <font size="5"><strong>前言</strong></font><br>———-<br><br><font color="#000000" size="4">我相信所有人希望都拥有一个属于自己的博客，可以随时记录自己生活、工作、学习上的点点滴滴，我也相信人生当中最珍贵的绝不是金钱，而是属于自己的人生回忆，当你老了，浏览着记录自己这一生经历的博客或者日记，慢慢地翻呀翻，看到熟悉的人会心一笑，这或许是一个人即将离开时最想做的一件事吧。无意中在一个网站看到5分钟搭建一个博客的文章，于是我就想尝试一下，说干就干，最后也算折腾出一个大致模型吧。第一篇博客就用来记录搭建的整个过程吧！</font>        
 

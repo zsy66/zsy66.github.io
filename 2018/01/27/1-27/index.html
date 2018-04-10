@@ -8,46 +8,7 @@
 
 <html class="theme-next pisces use-motion" lang="">
 <head>
-   $(document).ready(function () {
-    var SelectText = function(element) {
-        var doc = document
-            , text = element
-            , range, selection
-        ;    
-        if (doc.body.createTextRange) {
-            range = document.body.createTextRange();
-            range.moveToElementText(text);
-            range.select();
-        } else if (window.getSelection) {
-            selection = window.getSelection();        
-            range = document.createRange();
-            range.selectNodeContents(text);
-            selection.removeAllRanges();
-            selection.addRange(range);
-        }
-    };
-
-    $(".code").each(function() {
-        var code = $(this).get(0);
-        var button_html = 
-            '<div style="position: fixed;'                                                               +
-                        'right: 3%;'                                                                     +
-                        'margin-top: 5px;'                                                               +
-                        'font-family: consolas, Menlo, \'PingFang SC\', \'Microsoft YaHei\', monospace;' +
-                        'font-size: 10px;'                                                               +
-                        'cursor: pointer;'                                                               +
-                        'color: #e31436;'                                                                +
-                        '">'                                                                             +
-            '<span>全选</span>'                                                                          +
-            '</div>';
-        var button = $(button_html);
-
-        $(button).click(function() {
-            SelectText(code);
-        });
-        $(button).insertBefore(this);
-    });
-});
+  
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -128,7 +89,7 @@
 <meta property="og:description" content="Share  Author-Zsy      今天分享一张图，一篇文章，希望对看到的人有所裨益。自己读的书太少，很惭愧，自己以后会努力多读点书。下面一个链接讲得是上大学的意义，已经征询过作者意见，同意转发:https://www.jianshu.com/p/b9d760b195cf">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.imgur.com/hk3ckCd.jpg">
-<meta property="og:updated_time" content="2018-04-05T04:07:40.733Z">
+<meta property="og:updated_time" content="2018-04-10T11:53:18.471Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1.27">
 <meta name="twitter:description" content="Share  Author-Zsy      今天分享一张图，一篇文章，希望对看到的人有所裨益。自己读的书太少，很惭愧，自己以后会努力多读点书。下面一个链接讲得是上大学的意义，已经征询过作者意见，同意转发:https://www.jianshu.com/p/b9d760b195cf">
@@ -389,7 +350,7 @@
 
       
         <hr>
-<center><font size="6"><strong>Share</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
+<center><font size="5"><strong>Share</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
 
 
 <font color="#000000" size="4">今天分享一张图，一篇文章，希望对看到的人有所裨益。<br><img src="https://i.imgur.com/hk3ckCd.jpg" alt=""><br>自己读的书太少，很惭愧，自己以后会努力多读点书。<br>下面一个链接讲得是上大学的意义，已经征询过作者意见，同意转发:<br><a href="https://www.jianshu.com/p/b9d760b195cf" target="_blank" rel="noopener">https://www.jianshu.com/p/b9d760b195cf</a><br></font> 

@@ -8,46 +8,7 @@
 
 <html class="theme-next pisces use-motion" lang="">
 <head>
-   $(document).ready(function () {
-    var SelectText = function(element) {
-        var doc = document
-            , text = element
-            , range, selection
-        ;    
-        if (doc.body.createTextRange) {
-            range = document.body.createTextRange();
-            range.moveToElementText(text);
-            range.select();
-        } else if (window.getSelection) {
-            selection = window.getSelection();        
-            range = document.createRange();
-            range.selectNodeContents(text);
-            selection.removeAllRanges();
-            selection.addRange(range);
-        }
-    };
-
-    $(".code").each(function() {
-        var code = $(this).get(0);
-        var button_html = 
-            '<div style="position: fixed;'                                                               +
-                        'right: 3%;'                                                                     +
-                        'margin-top: 5px;'                                                               +
-                        'font-family: consolas, Menlo, \'PingFang SC\', \'Microsoft YaHei\', monospace;' +
-                        'font-size: 10px;'                                                               +
-                        'cursor: pointer;'                                                               +
-                        'color: #e31436;'                                                                +
-                        '">'                                                                             +
-            '<span>全选</span>'                                                                          +
-            '</div>';
-        var button = $(button_html);
-
-        $(button).click(function() {
-            SelectText(code);
-        });
-        $(button).insertBefore(this);
-    });
-});
+  
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -127,7 +88,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="无题  Author-Zsy      似乎今天过得很平淡，唯一不同的是最近这段时间心绪不宁，每当快要回家的时候，我内心就会很乱，原因我也知道。到今天才知道词不达意是一首歌的名字，Phoebe是老友记里面一个角色的名字。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-05T04:07:54.805Z">
+<meta property="og:updated_time" content="2018-04-10T11:53:17.927Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1.26">
 <meta name="twitter:description" content="无题  Author-Zsy      似乎今天过得很平淡，唯一不同的是最近这段时间心绪不宁，每当快要回家的时候，我内心就会很乱，原因我也知道。到今天才知道词不达意是一首歌的名字，Phoebe是老友记里面一个角色的名字。">
@@ -387,7 +348,7 @@
 
       
         <hr>
-<center><font size="6"><strong>无题</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
+<center><font size="5"><strong>无题</strong></font>  </center><br><center><font size="4"><strong>Author-Zsy</strong></font>  </center> 
 
 
 <font color="#000000" size="4">似乎今天过得很平淡，唯一不同的是最近这段时间心绪不宁，每当快要回家的时候，我内心就会很乱，原因我也知道。到今天才知道词不达意是一首歌的名字，Phoebe是老友记里面一个角色的名字。</font> 

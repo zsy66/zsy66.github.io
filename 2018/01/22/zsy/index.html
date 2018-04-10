@@ -8,46 +8,7 @@
 
 <html class="theme-next pisces use-motion" lang="">
 <head>
-   $(document).ready(function () {
-    var SelectText = function(element) {
-        var doc = document
-            , text = element
-            , range, selection
-        ;    
-        if (doc.body.createTextRange) {
-            range = document.body.createTextRange();
-            range.moveToElementText(text);
-            range.select();
-        } else if (window.getSelection) {
-            selection = window.getSelection();        
-            range = document.createRange();
-            range.selectNodeContents(text);
-            selection.removeAllRanges();
-            selection.addRange(range);
-        }
-    };
-
-    $(".code").each(function() {
-        var code = $(this).get(0);
-        var button_html = 
-            '<div style="position: fixed;'                                                               +
-                        'right: 3%;'                                                                     +
-                        'margin-top: 5px;'                                                               +
-                        'font-family: consolas, Menlo, \'PingFang SC\', \'Microsoft YaHei\', monospace;' +
-                        'font-size: 10px;'                                                               +
-                        'cursor: pointer;'                                                               +
-                        'color: #e31436;'                                                                +
-                        '">'                                                                             +
-            '<span>全选</span>'                                                                          +
-            '</div>';
-        var button = $(button_html);
-
-        $(button).click(function() {
-            SelectText(code);
-        });
-        $(button).insertBefore(this);
-    });
-});
+  
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -132,7 +93,7 @@
 <meta property="og:image" content="https://i.imgur.com/KKmcA3q.png">
 <meta property="og:image" content="https://i.imgur.com/jP8beUc.png">
 <meta property="og:image" content="https://i.imgur.com/B0xShRd.png">
-<meta property="og:updated_time" content="2018-04-05T04:11:06.613Z">
+<meta property="og:updated_time" content="2018-04-10T11:52:29.234Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zsy">
 <meta name="twitter:description" content="基于Github的简易博客搭建   Author-Zsy   前言———-我相信所有人希望都拥有一个属于自己的博客，可以随时记录自己生活、工作、学习上的点点滴滴，我也相信人生当中最珍贵的绝不是金钱，而是属于自己的人生回忆，当你老了，浏览着记录自己这一生经历的博客或者日记，慢慢地翻呀翻，看到熟悉的人会心一笑，这或许是一个人即将离开时最想做的一件事吧。无意中在一个网站看到5分钟搭建一个博客的文章，于是">
@@ -392,7 +353,7 @@
       
 
       
-        <p><center><font size="6"><strong>基于Github的简易博客搭建</strong></font>  </center></p>
+        <p><center><font size="5"><strong>基于Github的简易博客搭建</strong></font>  </center></p>
 <p><center><font size="4"><strong>Author-Zsy</strong></font>  </center></p>
 <font size="5"><strong>前言</strong></font><br>———-<br><br><font color="#000000" size="4">我相信所有人希望都拥有一个属于自己的博客，可以随时记录自己生活、工作、学习上的点点滴滴，我也相信人生当中最珍贵的绝不是金钱，而是属于自己的人生回忆，当你老了，浏览着记录自己这一生经历的博客或者日记，慢慢地翻呀翻，看到熟悉的人会心一笑，这或许是一个人即将离开时最想做的一件事吧。无意中在一个网站看到5分钟搭建一个博客的文章，于是我就想尝试一下，说干就干，最后也算折腾出一个大致模型吧。第一篇博客就用来记录搭建的整个过程吧！</font>        
 
