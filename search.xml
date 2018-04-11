@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[4.1]]></title>
+    <url>%2F2018%2F04%2F10%2F4-10%2F</url>
+    <content type="text"><![CDATA[Hexo的疑难杂症 一.Hexo next 头像设置 今天上午搞了好久的Hexo头像问题，刚开始没仔细看调试，以为是自己load的图片保存目录有问题，试了很多次，都不行，后来添加以下命令:Hexo s –debug可以看到运行的具体过程，发现显示如下错误：config.yml file load failed有经验的都知道，这种错误是往往是空格导致，比如以下示例：avatar:（此处应有一个空格）/images/avatar.gif但是我确定我的格式是这样的，后来多次尝试才发现，这样的空格格式也不对，如下图所示：红色标注处不应该空格，要顶格，但是这种是否顶格不是固定的，要看上面格式，保持一致就可以了，如下：这种就不用顶格，否则会报错。二.Hexo next 动态背景设置网上有很多教程讲如何设置动态背景，我基本都看了，因此也有个总结，之所以看，是因为遇到了一些问题。我的问题是按照网上教程配置，不出效果，检查了很久，才解决这个问题。无论是高版本(以5.1.4为标准）还是低一点的版本，都需要配置两个文件，一个是layout.swing（主题文件夹themes\next\layout)和主题文件config.yml,唯一可能有区别的就是低版本的config.yml要自己添加背景代码，高版本直接自己写true，但是layout.swing都要配置。配置config.yml：找到canvas_nest(没有的在最后加）写true，下面的three_waves是另外的背景（注意能不能用最好打开注释的链接检查一下）；配置layout.swing：这里一定要注意判断语句的判断条件，都将代码添加到文档body的开始处：低版本的判断配置语句如下% if theme.canvas_nest %高版本的判断配置如下% if theme.vendors.canvas_nest %两个唯一区别就是判断条件是否加了决定是否加vendors,是否加这个要看主题配置文件下的vendors是否与canvas_nest对齐，若对齐，则不加；否则加。完整的代码网上一搜就能找到，这里只强调易错的地方。]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[4.5]]></title>
+    <url>%2F2018%2F04%2F05%2F4-5%2F</url>
+    <content type="text"><![CDATA[清明 今天是清明节，不知为什么我还是买了一个域名，主要想试试用域名是什么感觉的吧，至少访问起来比较快速一点吧，上午差点把我的向日葵幼苗给摔死，拿衣服不小心碰到了它的盆子，结果惨不忍睹，抢救了一下，应该可以继续吧，大兄弟，你可得挺住啊。好吧，确实需要我帮它洗洗了。从养花多多少少就可以看出一个人的一些东西，我不是一个精致的人。]]></content>
+      <categories>
+        <category>行想(CQ)</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[3.18]]></title>
+    <url>%2F2018%2F03%2F22%2F3-18%2F</url>
+    <content type="text"><![CDATA[Cadence Author-Zsy 记录一下Cadence导入库的步骤]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[3-13]]></title>
+    <url>%2F2018%2F03%2F15%2F3-13%2F</url>
+    <content type="text"><![CDATA[Share 上次写博客还是寒假前，如今已是阳春三月，不，对我来说确是寒冬腊月，因为自己这段时间太颓废了，坚持真的好难，慢慢朝着好习惯努力吧！]]></content>
+      <categories>
+        <category>行想(CQ)</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[1.29]]></title>
+    <url>%2F2018%2F01%2F29%2F1-29%2F</url>
+    <content type="text"><![CDATA[团圆 今天很冷，十分冷，但是看到这张图片老远就能感受到一阵大家的热情。早该这样了。]]></content>
+      <categories>
+        <category>行想(CQ)</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[1.28]]></title>
+    <url>%2F2018%2F01%2F28%2F1-28%2F</url>
+    <content type="text"><![CDATA[Share 今天试了一下小米5x手机，手感很好，音乐还行（我对音质没什么要求），照片像素白天还可以（晚上没试，我对画质也没太高要求），王者荣耀游戏就那样，不如平板Ipad流畅（网速不影响的前提下）。]]></content>
+      <categories>
+        <category>行想(CQ)</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[1.27]]></title>
+    <url>%2F2018%2F01%2F27%2F1-27%2F</url>
+    <content type="text"><![CDATA[Share 今天分享一张图，一篇文章，希望对看到的人有所裨益。自己读的书太少，很惭愧，自己以后会努力多读点书。下面一个链接讲得是上大学的意义，已经征询过作者意见，同意转发:https://www.jianshu.com/p/b9d760b195cf]]></content>
+      <categories>
+        <category>行想(CQ)</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[1.26]]></title>
+    <url>%2F2018%2F01%2F26%2F1-26%2F</url>
+    <content type="text"><![CDATA[无题 似乎今天过得很平淡，唯一不同的是最近这段时间心绪不宁，每当快要回家的时候，我内心就会很乱，原因我也知道。到今天才知道词不达意是一首歌的名字，Phoebe是老友记里面一个角色的名字。]]></content>
+      <categories>
+        <category>行想(CQ)</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[1.25]]></title>
+    <url>%2F2018%2F01%2F25%2F1-25%2F</url>
+    <content type="text"><![CDATA[Altium Design15拐角模式切换 Altium Design15,在绘制原理图的时候，相信很多小伙伴都会遇到这样一个问题，快捷键：Shift+Space并没什么用，即使把键盘按坏，也没用，我就遇到这个问题了，经过一番摸索，终于解决了。解决办法如下：选择你想要的线，点击鼠标左键，确定线的起点，然后拖动鼠标绘制线，在每个拐点都要点击确认，然后先点击Ctr+Shift+Space，这个时候再点击Shift+Space就可以自由切换拐角模式了。不多说了，帮人买一个小米5X手机，我得打开看看怎么样。放图为证，我是一个正经的人，不撒谎，也不吹牛。最后的最后，想说：祝你生日快乐！永远快乐！]]></content>
+      <categories>
+        <category>行想(CQ)</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[1.24]]></title>
+    <url>%2F2018%2F01%2F25%2F1-24%2F</url>
+    <content type="text"><![CDATA[心情复杂的一天 昨天装了一个软件——Altium Design15,在绘制原理图的时候，有的元件在软件自带的库中找不到，这里有一个库希望可以帮到大家：http://techdocs.altium.com/display/ADOH/Download+Libraries打开页面如下：下载过程可能经常中断，用Chorm浏览器可能好一点；今天中午一局黄金Ⅳ王者荣耀，可把我气坏了，后羿英雄使用者竟然拿我打野的一蓝，而且是我打得蓝奄奄一息，他上来直接射杀，然后上路不去守，跑去中路跟着妲己，最后导致中路被破两个塔，结果如何，当然是输了，其实我挺菜的，不然怎么连他都带不起来？下午在简书上看到一篇文章，关于情感的，评论了一下，收到了文章作者的答复，于是聊了一下，得出一个结论：女生在感情方面很多时候比男生要冷静，而且更决绝。放图为证，我是一个正经的人，不撒谎，也不吹牛。]]></content>
+      <categories>
+        <category>行想(CQ)</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[1.23]]></title>
+    <url>%2F2018%2F01%2F23%2F1-23%2F</url>
+    <content type="text"><![CDATA[Altium Design15 Win10 安装 今天装了一个软件——Altium Design15,可以制作PCB版图，在安装破解过程中，有一步是运行patch.exe，结果会弹出以下提示信息：然后我就百度各种解决办法，有的说是系统问题，win10可能不支持，有的还说可能显卡有问题，驱动没装好，等等，找了好久，没有找到我想要的解决办法，想要的解决办法当然是简单，不用太折腾电脑，找了很久没找到，最后我就把他搁置一旁，大概等了1小时，重新破解，就不会出现这个问题了，哈哈，就是这么神奇，为了验证不是运气，别的小伙伴也可以试试，有答案告诉我一声。PS:不支持盗版，有条件的同学希望去支持正版，没条件的同学现在先用盗版，等有钱了再去补偿，这样想心里或许会好过点，别问我为什么会知道。]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[1.22]]></title>
+    <url>%2F2018%2F01%2F22%2F1-22%2F</url>
+    <content type="text"><![CDATA[校园夜跑记事（一） 最近或许是因为放假的缘故吧，饮食有些不规律，尤其是晚上，总要到了8点左右才去吃，没办法，不饿也不能硬塞吧。吃了就回去歇了歇，差不多的时候就去跑了会步，严格是走了会路，不过我走路速度比较快，走在路上，想到一句台词，如果原本是两个好朋友，但后来因为一些事情产生了难以调和的矛盾，比如女生啦，等等，他们很久之后见面或者多年之后有人问起他们的关系，我觉得这样说比较形象，很多人认为我们的关系就像王者荣耀中的王者等级那么高，其实是错觉，仔细看，你会发现，关系级别只达到了黄金级别，但其实黄金的级别也不低。随手一拍，不配图感觉像是在撒谎，我可是个正经的人。]]></content>
+      <categories>
+        <category>行想(CQ)</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[zsy]]></title>
+    <url>%2F2018%2F01%2F22%2Fzsy%2F</url>
+    <content type="text"><![CDATA[基于Github的简易博客搭建 前言———-我相信所有人希望都拥有一个属于自己的博客，可以随时记录自己生活、工作、学习上的点点滴滴，我也相信人生当中最珍贵的绝不是金钱，而是属于自己的人生回忆，当你老了，浏览着记录自己这一生经历的博客或者日记，慢慢地翻呀翻，看到熟悉的人会心一笑，这或许是一个人即将离开时最想做的一件事吧。无意中在一个网站看到5分钟搭建一个博客的文章，于是我就想尝试一下，说干就干，最后也算折腾出一个大致模型吧。第一篇博客就用来记录搭建的整个过程吧！ 正文———-搭建前准备 1.windows电脑（我的电脑是windows10系统，windows7 8都可以）2.安装Node.js(此软件主要为了在你电脑上安装一个环境，具体环境有兴趣同学可以自行去了解一下，用处挺大）4.注册一个Github账号4.安装Git安装Node.js这一步非常简单，下载好安装包，直接双击运行，然后一致next，这里默认装在系统盘里，最好就别改动路径了，反正占的空间也不大，最后finish，就算安装成功了。注册一个Github账号 登陆Github官网，然后可看到以下页面：有账号的同学直接点击图片上的2号选项，没有账号的同学选择1号选项，这个网站是码农的天堂。重要：uername 最好都用小写而且起一个好听点的，因为最后建立的博客地址是：http://username.github.io（如果你不买域名的话，不过就算买域名感觉也要起一个好名字吧） 安装Git 这个软件也很容易安装，几乎也是一致next，唯一注意的就是注意一些选项的勾选，有任何疑惑，直接搜一下-Git安装教程，就解决了，我所给的安装包链接也是针对windows系统的。 搭建过程中 1. 创建Repository现在登录进入Github网站，按照下图序号依次点击1.1 2 3： 对于3选项，Repository 名字应该是http://username.github.io，点击Creat repository.2. 配置和使用Github在桌面找到Bash快捷方式，如上图所示，没有快捷方式，可以通过电脑所有程序找到2.1 配置SSH keys SSH keys就是用来使本地的 git 项目与 github 联系2.2 检查电脑是否设置SSH keys首先要检查自己电脑上现有的 SSH key，打开Git Bash软件输入：$ cd ~/. ssh 然后回车键，结果如果显示“No such file or directory”，说明这是你第一次使用 git2.3 生成SSH keys2.3.1输入命令$ ssh-keygen -t rsa -C “邮件地址@youremail.com”如$ ssh-keygen -t rsa -C 1678063623@qq.com(此邮箱为你的Github邮箱账号）2.3.2正常结果显示$ ssh-keygen -t rsa -C &quot;邮件地址@youremail.com&quot;Generating public/private rsa key pair.Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt;按下Enter键就好&gt;（最后一行的作用是设置你的SSH key 的保存路径，按下Enter，设置SSH key 的默认保存路径，C/user/……，如果后面找不到SSH Key,可以重新设置一个自己的理想路径）2.3.3设置密码设置好保存路径后，按下Enter键，系统会提示你输入密码Enter passphrase (empty for no passphrase): （输入密码，密码不显示，记住密码）Enter same passphrase again:（再次输入密码，密码不显示）密码主要作用:每次你提交新的文章更新，都要输入密码，验证是否你本人操作，不设置密码，就可以直接提交。]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+  </entry>
+</search>
