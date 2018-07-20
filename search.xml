@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[7.2]]></title>
     <url>%2F2018%2F07%2F20%2F7-20%2F</url>
-    <content type="text"><![CDATA[Altium Design 15 间距 Altium Design 15 从原理图映射到PCB图上，可能会出现部分元件的管脚是绿色，放大之后绿色区域显示许多错号，如下图所示：- 这个应该是间距规则设置错误的问题，具体说一下就是封装的间距设置小于等于布线规则里面的最小间距，布线规则里面的最小间距就是电气规则的 mix clearance，只有当规则的最小间距（clearance）大于封装的间距才不会报错。]]></content>
+    <content type="text"><![CDATA[Altium Design 15 间距 Altium Design 15 从原理图映射到PCB图上，可能会出现部分元件的管脚是绿色，放大之后绿色区域显示许多错号，如下图所示：- 这个应该是间距规则设置错误的问题，具体说一下就是封装的间距设置小于等于布线规则里面的最小间距，布线规则里面的最小间距就是电气规则的 mix clearance，只有当规则的最小间距（clearance）大于封装的间距才不会报错，希望对你有所帮助。]]></content>
       <categories>
         <category>技术</category>
       </categories>
