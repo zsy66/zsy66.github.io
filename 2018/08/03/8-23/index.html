@@ -89,7 +89,7 @@
 <meta property="og:description" content="基于Modelsim的I2C CMOS串行的EEPROM读写操作    一.Modelsim软件 这个软件最大的好处就是速度快，与传统的EDA设计工具相比，最显著的特点就是速度快，为什么这么快呢，因为它只能作为仿真工具，无法综合，对于初级阶段的人来说，先来仿真也未尝不可；当然这个软件可以与许多大型的EDA设计工具配合使用，比较常用的就是Quartus设计软件。Modelsim软件的版本很多，如1">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.imgur.com/IBgiY6h.png">
-<meta property="og:updated_time" content="2018-08-03T11:53:23.107Z">
+<meta property="og:updated_time" content="2018-08-03T12:09:25.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="8.23">
 <meta name="twitter:description" content="基于Modelsim的I2C CMOS串行的EEPROM读写操作    一.Modelsim软件 这个软件最大的好处就是速度快，与传统的EDA设计工具相比，最显著的特点就是速度快，为什么这么快呢，因为它只能作为仿真工具，无法综合，对于初级阶段的人来说，先来仿真也未尝不可；当然这个软件可以与许多大型的EDA设计工具配合使用，比较常用的就是Quartus设计软件。Modelsim软件的版本很多，如1">
@@ -150,46 +150,6 @@
 
 
   
-  $(document).ready(function () {
-    var SelectText = function(element) {
-        var doc = document
-            , text = element
-            , range, selection
-        ;    
-        if (doc.body.createTextRange) {
-            range = document.body.createTextRange();
-            range.moveToElementText(text);
-            range.select();
-        } else if (window.getSelection) {
-            selection = window.getSelection();        
-            range = document.createRange();
-            range.selectNodeContents(text);
-            selection.removeAllRanges();
-            selection.addRange(range);
-        }
-    };
-
-    $(".code").each(function() {
-        var code = $(this).get(0);
-        var button_html = 
-            '<div style="position: fixed;'                                                               +
-                        'right: 3%;'                                                                     +
-                        'margin-top: 5px;'                                                               +
-                        'font-family: consolas, Menlo, \'PingFang SC\', \'Microsoft YaHei\', monospace;' +
-                        'font-size: 10px;'                                                               +
-                        'cursor: pointer;'                                                               +
-                        'color: #e31436;'                                                                +
-                        '">'                                                                             +
-            '<span>全选</span>'                                                                          +
-            '</div>';
-        var button = $(button_html);
-
-        $(button).click(function() {
-            SelectText(code);
-        });
-        $(button).insertBefore(this);
-    });
-});
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
