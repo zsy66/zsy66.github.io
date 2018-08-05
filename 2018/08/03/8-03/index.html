@@ -89,7 +89,7 @@
 <meta property="og:description" content="基于Modelsim的I2C CMOS串行的EEPROM读写操作    一.Modelsim软件 这个软件最大的好处就是速度快，与传统的EDA设计工具相比，最显著的特点就是速度快，为什么这么快呢，因为它只能作为仿真工具，无法综合，对于初级阶段的人来说，先来仿真也未尝不可；当然这个软件可以与许多大型的EDA设计工具配合使用，比较常用的就是Quartus设计软件。Modelsim软件的版本很多，如1">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.imgur.com/IBgiY6h.png">
-<meta property="og:updated_time" content="2018-08-03T12:45:01.856Z">
+<meta property="og:updated_time" content="2018-08-03T13:59:37.240Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="8.23">
 <meta name="twitter:description" content="基于Modelsim的I2C CMOS串行的EEPROM读写操作    一.Modelsim软件 这个软件最大的好处就是速度快，与传统的EDA设计工具相比，最显著的特点就是速度快，为什么这么快呢，因为它只能作为仿真工具，无法综合，对于初级阶段的人来说，先来仿真也未尝不可；当然这个软件可以与许多大型的EDA设计工具配合使用，比较常用的就是Quartus设计软件。Modelsim软件的版本很多，如1">
@@ -723,8 +723,8 @@ endmodule
 
     ```   
 </code></pre><p>&emsp;&emsp;</p>
-<h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><pre><code>    ```  
-`timescale 1ns / 1ps   
+<h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><p><code></code></p>
+<pre><code>`timescale 1ns / 1ps   
 module tbI2C;
 reg clk;
 reg rst;
@@ -768,8 +768,8 @@ end
 always #1 clk=~clk;
 
 endmodule
-    ```  
-</code></pre> <font color="#000000" size="4">关于在testbench的阻塞与非阻塞语句的差别，具体看一下以下链接的文章</font><br><a href="https://www.cnblogs.com/fkl523/p/4029467.html" target="_blank" rel="noopener">https://www.cnblogs.com/fkl523/p/4029467.html</a><br> <font color="#000000" size="4"><br>下图就是EEPROM的写代码的测试结果</font><br><img src="https://i.imgur.com/IBgiY6h.png" alt=""><br><br><font color="#000000" size="4">这个代码看似很长，其实读写重复部分很多，可以优化一下，还要说一下，仿真检验的testbench部分，我只验证了写的部分（RW_sig==0)的代码，读的代码没验证，我觉得出错的可能性非常大，有兴趣的可以继续完成验证。在验证写的过程中，因为定义的SDA为inout类型，双向端口，在testbench中只能声明为wire类型，可是在应答中，需要将SDA传输给IsACK，于是我增加了一个SDA_data作为传输向量，只是为了看完整的仿真结果。</font> 
+</code></pre><p>          </p>
+ <font color="#000000" size="4">关于在testbench的阻塞与非阻塞语句的差别，具体看一下以下链接的文章</font><br><a href="https://www.cnblogs.com/fkl523/p/4029467.html" target="_blank" rel="noopener">https://www.cnblogs.com/fkl523/p/4029467.html</a><br> <font color="#000000" size="4"><br>下图就是EEPROM的写代码的测试结果</font><br><img src="https://i.imgur.com/IBgiY6h.png" alt=""><br><br><font color="#000000" size="4">这个代码看似很长，其实读写重复部分很多，可以优化一下，还要说一下，仿真检验的testbench部分，我只验证了写的部分（RW_sig==0)的代码，读的代码没验证，我觉得出错的可能性非常大，有兴趣的可以继续完成验证。在验证写的过程中，因为定义的SDA为inout类型，双向端口，在testbench中只能声明为wire类型，可是在应答中，需要将SDA传输给IsACK，于是我增加了一个SDA_data作为传输向量，只是为了看完整的仿真结果。</font> 
 
       
     </div>
@@ -803,10 +803,6 @@ endmodule
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/03/8-23/" rel="prev" title="8.23">
-                8.23 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -892,7 +888,7 @@ endmodule
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
