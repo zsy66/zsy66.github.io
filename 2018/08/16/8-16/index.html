@@ -90,7 +90,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.imgur.com/yfOSqaf.png">
 <meta property="og:image" content="https://i.imgur.com/9yDKwgv.png">
-<meta property="og:updated_time" content="2018-08-16T11:31:07.017Z">
+<meta property="og:updated_time" content="2018-08-16T11:43:16.457Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="8.16">
 <meta name="twitter:description" content="Verilog 的概念注意点   一.case语句以前接触过case语句，知道case语句分为case，casex,以及casez三类，但是觉得一般用不到，就没怎么注意，可是因为这个导致程序出错就不得不注意了，在写一个外围测试元件的时候,写了以下语句：   12345casex(state)		13&amp;apos;b1_xxxx_xxxx_xxxx: &amp;#123;rom_sel,ram_sel&amp;#1">
@@ -424,12 +424,7 @@
 <p>   <img src="https://i.imgur.com/yfOSqaf.png" alt=""></p>
 <p>上述结果告诉我们：<strong><strong>!除非你的值为00，否则该运算符的结果都为0；  ~就看七位变量的最低位，将最低位取反为该运算符的结果；</strong></strong></p>
 <h3 id="三-常用的系统函数"><a href="#三-常用的系统函数" class="headerlink" title="三.常用的系统函数"></a>三.常用的系统函数</h3><p>为了更好的测试我们的代码，Verilog中有一些常用的系统函数，如$display 、$monitor、$strobe等等，其中：  </p>
-<ol>
-<li>$monitor表示连续监测变量，每当参数列表中的变量或者表达式的值发生变化时，整个参数列表中变量或者表达式的值都将输出显示；</li>
-<li><p>$display，$strobe都表示打印输出结果，但区别是$strobe只在当前时刻结束才输出打印结果，而$display只要仿真器观测到变量就会打印输出结果；   </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">`timescale 1ns/1ps</span><br><span class="line"></span><br><span class="line">module test;</span><br><span class="line">	reg a,b;</span><br><span class="line">	initial</span><br><span class="line"></span><br><span class="line">  begin</span><br><span class="line">		#1 a=0;</span><br><span class="line">  		   b=1;</span><br><span class="line">  		   a&lt;=b;</span><br><span class="line">           b&lt;=a;</span><br><span class="line"></span><br><span class="line">		   $write(&quot;$display&quot;);</span><br><span class="line">		   $display(&quot;%b  %b  %b&quot;, $time, a, b);</span><br><span class="line">		   $write(&quot;$strobe&quot;);</span><br><span class="line">		   $strobe(&quot;%b  %b  %b&quot;, $time, a, b);</span><br><span class="line">		   $write(&quot;$monitor&quot;);</span><br><span class="line">		   $monitor(&quot;%b  %b  %b&quot;, $time, a, b);</span><br><span class="line"></span><br><span class="line">		#2 a=0;</span><br><span class="line">           b=1;</span><br><span class="line">        #3 a=1;</span><br><span class="line">           b=1;</span><br><span class="line"></span><br><span class="line">     end</span><br><span class="line"></span><br><span class="line">   	endmodule</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+<p>1.$monitor表示连续监测变量，每当参数列表中的变量或者表达式的值发生变化时，整个参数列表中变量或者表达式的值都将输出显示；<br>2.$display，$strobe都表示打印输出结果，但区别是$strobe只在当前时刻结束才输出打印结果，而$display只要仿真器观测到变量就会打印输出结果；<br>        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">`timescale 1ns/1ps</span><br><span class="line"></span><br><span class="line">module test;</span><br><span class="line"></span><br><span class="line">	reg a,b;</span><br><span class="line">	initial</span><br><span class="line"></span><br><span class="line"> 	  begin</span><br><span class="line">		#1 a=0;</span><br><span class="line"> 			   b=1;</span><br><span class="line"> 			   a&lt;=b;</span><br><span class="line">        	  b&lt;=a;</span><br><span class="line">		</span><br><span class="line">		   $write(&quot;$display&quot;);</span><br><span class="line">	 	  $display(&quot;%b  %b  %b&quot;, $time, a, b);</span><br><span class="line">	  	 $write(&quot;$strobe&quot;);</span><br><span class="line">	  	 $strobe(&quot;%b  %b  %b&quot;, $time, a, b);</span><br><span class="line">	  	 $write(&quot;$monitor&quot;);</span><br><span class="line">	  	 $monitor(&quot;%b  %b  %b&quot;, $time, a, b);</span><br><span class="line"></span><br><span class="line">		#2 a=0;</span><br><span class="line">       	   b=1;</span><br><span class="line">       	#3 a=1;</span><br><span class="line">      		   b=1;</span><br><span class="line"></span><br><span class="line">        end</span><br><span class="line"></span><br><span class="line">endmodule</span><br></pre></td></tr></table></figure></p>
 <p>测试代码的结果：  </p>
 <p>   <img src="https://i.imgur.com/9yDKwgv.png" alt=""></p>
 
@@ -567,15 +562,6 @@
               </div>
             
 
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">tags</span>
-                </a>
-              </div>
             
 
           </nav>
