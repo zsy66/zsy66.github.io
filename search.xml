@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[8.16]]></title>
+    <url>%2F2018%2F08%2F16%2F8-16%2F</url>
+    <content type="text"><![CDATA[Verilog 的概念注意点 一.case语句以前接触过case语句，知道case语句分为case，casex,以及casez三类，但是觉得一般用不到，就没怎么注意，可是因为这个导致程序出错就不得不注意了，在写一个外围测试元件的时候,写了以下语句： 12345casex(state) 13&apos;b1_xxxx_xxxx_xxxx: &#123;rom_sel,ram_sel&#125;=2&apos;b10; 13&apos;b0_xxxx_xxxx_xxx1: &#123;rom_sel,ram_sel&#125;=2&apos;b01; default: &#123;rom_sel,ram_sel&#125;=2&apos;b00;endcase 这里，如果换成case，输出结果则与预期不符，casez用来处理不用考虑高阻值z的比较过程，casex用来处理既不用考虑高阻值z也不用考虑不定态x的情况，改成case，输出结果一般都是default的输出结果。 二.取反Verilog有~和！两个符号，之前认为可以共用。的确，有的情况可以通用，但是有的情况不可以通用，比如，你定义一个一位变量，以及一个7位变量,将七位变量分别以上述两种符号取反并将所得结果赋值给上述定义的一位变量，对比结果可知(one代表！的输出结果，zero代表~的运算结果）： 上述结果告诉我们：!除非你的值为00，否则该运算符的结果都为0； ~就看七位变量的最低位，将最低位取反为该运算符的结果； 三.常用的系统函数为了更好的测试我们的代码，Verilog中有一些常用的系统函数，如$display 、$monitor、$strobe等等，其中： $monitor表示连续监测变量，每当参数列表中的变量或者表达式的值发生变化时，整个参数列表中变量或者表达式的值都将输出显示； $display，$strobe都表示打印输出结果，但区别是$strobe只在当前时刻结束才输出打印结果，而$display只要仿真器观测到变量就会打印输出结果； 12345678910111213141516171819202122232425262728`timescale 1ns/1psmodule test; reg a,b; initial begin #1 a=0; b=1; a&lt;=b; b&lt;=a; $write(&quot;$display&quot;); $display(&quot;%b %b %b&quot;, $time, a, b); $write(&quot;$strobe&quot;); $strobe(&quot;%b %b %b&quot;, $time, a, b); $write(&quot;$monitor&quot;); $monitor(&quot;%b %b %b&quot;, $time, a, b); #2 a=0; b=1; #3 a=1; b=1; end endmodule 测试代码的结果：]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[8.05]]></title>
     <url>%2F2018%2F08%2F05%2F8-05%2F</url>
     <content type="text"><![CDATA[上海的一日半行 一.上海外滩来这儿几日了，也没好好看看，今日有人陪着一起看看，还是挺惬意的，不过这惬意很快就被打破了，因为上海的夏天真的不是一般的热，而且它还巨晒，估计又会增上几缕黝黑的妆容了。下午6点多来到外滩，比之前来的时候，体验感差极了，因为人比之前多了许多，走路基本就是走一步，停一百步，东方明珠的整个四周全部围满了人，完全不留任何空袭，想拍照不可能的，总有很多人入境，下面是我的杰作。———-———-———-———-不过说实话，景色还是挺奢华的！### 一.上海学校中午在上海的一所学校看了看，校园很大，依然很晒，不过有了交通工具-共享电车，还是有种雪中送碳的感觉，参观的学校，感觉校门都很严肃，而且风格迥异，总感觉哪里怪怪的，不过同行人倒逛的津津有味，拍的照片也被我顺手拿下。———-———-———-———-]]></content>
