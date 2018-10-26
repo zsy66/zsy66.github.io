@@ -292,6 +292,181 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/20/4-20/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Flying Pig">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/20/4-20/" itemprop="url">4-20</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-20T18:57:56+08:00">
+                2018-04-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  433
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><center><font size="5"><strong> off grid polygon on  layer Metal3 in Cadence</strong></font>  </center><br>我用Cadence画完版图，结果显示几千个错误，下图所示的是经过我改正一些错误后的视图<br><img src="https://i.imgur.com/OQH6PJ1.png" alt=""><br>错误还是很多，但是很多错误属于同类错误，之前画过一个简单的版图，遇到一些错误，所以有一点点经验，但是今天说一说开头显示的那些错误：<br><code>off grid polygon ……<code>   </code></code></p>
+<p>这是格点导致的错误，解决问题办法，以下图为例，先点击快捷键E调出格点设置按钮：</p>
+<p><img src="https://i.imgur.com/DxevXqH.png" alt=""><br>重点留意Grid Controls那一栏，如果你的X Snap Spacing 和Y Snap Spacing 设置0.01的话，你的所有器件和布线，引脚等等的坐标精度都不可以超过0.01，比如（12.563，12.191）这个坐标就会报错，你可以改成（12.56，12.19),有人觉得那我直接把精度改成0.001，不久可以了，我试了一次，也会报错，理论上应该可以，有兴趣的同学可以继续研究一下，对了，要感谢原文作者，链接如下：<br><a href="http://www.pittnuts.com/2015/07/a-quick-way-to-clear-drc-offgrid-warnings-in-calibre-and-assura/" target="_blank" rel="noopener">http://www.pittnuts.com/2015/07/a-quick-way-to-clear-drc-offgrid-warnings-in-calibre-and-assura/</a><br>有时候会遇到以下错误，不提示具体哪一层，只出现这个问题:<br><img src="https://i.imgur.com/Tpxwgss.png" alt=""><br>这个问题比较棘手，首先检查版图提示区有没有多余的金属线，然后修改坐标，确保坐标可以整除2，如2.24或者2.26，如果余0.005就会报错。<br>最后总结一下我的错误，可能是因为我在两个Cadence 环境下运行，两次修改版图时设置的space不一样导致的，如果出现，可以参考上述解决办法。</p>
+<font color="#000000" size="4"><br></font> 
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/18/4-18/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1856,181 +2031,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/25/1-25/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Flying Pig">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/25/1-25/" itemprop="url">1.25</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-25T20:39:27+08:00">
-                2018-01-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/行想-CQ/" itemprop="url" rel="index">
-                    <span itemprop="name">行想(CQ)</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  209
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<center><font size="5"><strong>Altium Design15拐角模式切换</strong></font>  </center>
-
-<font color="#000000" size="4">Altium Design15,在绘制原理图的时候，相信很多小伙伴都会遇到这样一个问题，快捷键：Shift+Space并没什么用，即使把键盘按坏，也没用，我就遇到这个问题了，经过一番摸索，终于解决了。解决办法如下：<br>选择你想要的线，点击鼠标左键，确定线的起点，然后拖动鼠标绘制线，在每个拐点都要点击确认，然后先点击Ctr+Shift+Space，这个时候再点击Shift+Space就可以自由切换拐角模式了。<br><img src="https://i.imgur.com/HayIBFP.png" alt=""><br>不多说了，帮人买一个小米5X手机，我得打开看看怎么样。<br><img src="https://i.imgur.com/jGubCnO.jpg" alt=""><br>放图为证，我是一个正经的人，不撒谎，也不吹牛。<br><br><img src="https://i.imgur.com/wuRbgye.jpg" alt=""><br>最后的最后，想说：祝你生日快乐！永远快乐！</font> 
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2085,7 +2085,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[10.26]]></title>
+    <url>%2F2018%2F10%2F26%2F10-26%2F</url>
+    <content type="text"><![CDATA[HFSS HFSS这个软件算是和我缘分吧，本来毕设就需要用这个仿真一个电感，但是当时时间紧，自己又有些懒，所以就没学，但是今天又需要用到它仿真天线，如今避无可避，只能乖乖学习。这个软件我装了好几次，都显示无法检测到库错误提示，安装网上位置更改为默认，也无济于事，最后通过更改安装系统才成功安装，在win10上就是安装不成功（个人经验），win7一次安装成功，祝你不要遇到我这个问题！还没学这个软件，不知道还会遇到啥问题，对了，我是在win10上装的win7虚拟机。]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[8.19]]></title>
     <url>%2F2018%2F08%2F19%2F8-19%2F</url>
     <content type="text"><![CDATA[Matlab FDATOOL fdatool是用来快速设计滤波器的重要工具之一，需要明白其各个参数的具体含义。 $$ [n,fo,ao,w] = firpmord(f,a,dev) $$其中公式右边的f是指通带、阻带的边缘频率，确切来说是归一化后的边缘频率，其中采样频率的一半为1，因此这里的f需要进行归一化。]]></content>
