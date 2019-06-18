@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[2019-4-10]]></title>
-    <url>%2F2019%2F04%2F10%2F2019-4-10%2F</url>
-    <content type="text"><![CDATA[致2019年4月1日之前的博客 今天突然意识到我之前的博客的所有图片都丢失了，自己之前也没备份，原因也没搞清楚，好像是自己上传的时候没有在当地保存，所以造成今天这个样子，好气啊，那么多辛辛苦苦的图片都没了。从今天开始，继续博客之路吧。]]></content>
+    <title><![CDATA[2019-6-18]]></title>
+    <url>%2F2019%2F06%2F18%2F2019-6-18%2F</url>
+    <content type="text"><![CDATA[测试必读 测试必读：测试过程一定要有耐心，一定不能图快，有怀疑的地方一定要验证（根据原理图或者datasheet），然后再焊接，如果控制不住，想想ECG的板子，就能控制住了；如果没有原理图支持，要想是否不焊接，也可以验证，暂时短接上电路，或者不在容易损伤的位置焊接，一般只要动脑子，都可以找到， 一定不要急，宁愿没找到问题，也不要继续恶化板子。]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[2019-5-19]]></title>
+    <url>%2F2019%2F05%2F19%2F2019-5-19%2F</url>
+    <content type="text"><![CDATA[致2019年4月1日之前的博客 To be or not to be 是一个好问题，去还是不去呢，大致世上所有的事情都可以用这半句话来概括，最近好多人都在劝我不要太在意，不然活着也太累了吧。咋感觉我自己这么悲观呢，明明不想这样，就是控制不住，有时候想做就去做呗，何必那么多的想法，可是真正这样的时候，就是改不了，这段时间又开始陷入一种低落情绪，其实我也知道原因，可是又有什么用呢，人生最痛苦的事情就是你知道该怎么做，却不能去做！还是继续走下去吧。]]></content>
       <categories>
         <category>行想（CQ)</category>
       </categories>
-      <tags>
-        <tag>hide</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[2019-4-1]]></title>
