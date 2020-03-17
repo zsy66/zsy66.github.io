@@ -292,6 +292,181 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/10/4-10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Flying Pig">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/10/4-10/" itemprop="url">4-10</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-10T01:04:27+08:00">
+                2018-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  579
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<center><font size="5"><strong>Hexo的疑难杂症</strong></font>  </center>
+
+<font size="4"><strong>一.Hexo next 头像设置</strong> </font><br><font color="#000000" size="4">今天上午搞了好久的Hexo头像问题，刚开始没仔细看调试，以为是自己load的图片保存目录有问题，试了很多次，都不行，后来添加以下命令:<br><code>Hexo s –debug</code><br>可以看到运行的具体过程，发现显示如下错误：<br><code>config.yml file load failed</code><br>有经验的都知道，这种错误是往往是空格导致，比如以下示例：<br><code>avatar:（此处应有一个空格）/images/avatar.gif</code><br>但是我确定我的格式是这样的，后来多次尝试才发现，这样的空格格式也不对，如下图所示：<br><img src="https://i.imgur.com/TilHNMo.png" alt=""><br>红色标注处不应该空格，要顶格，但是这种是否顶格不是固定的，要看上面格式，保持一致就可以了，如下：<br><img src="https://i.imgur.com/ninYoxf.png" alt=""><br>这种就不用顶格，否则会报错。<br><br><strong>二.Hexo next 动态背景设置</strong><br><br>网上有很多教程讲如何设置动态背景，我基本都看了，因此也有个总结，之所以看，是因为遇到了一些问题。<br>我的问题是按照网上教程配置，不出效果，检查了很久，才解决这个问题。<br>无论是高版本(以5.1.4为标准）还是低一点的版本，都需要配置两个文件，一个是layout.swing（主题文件夹themes\next\layout)和主题文件config.yml,唯一可能有区别的就是低版本的config.yml要自己添加背景代码，高版本直接自己写true，但是layout.swing都要配置。<br>配置config.yml：找到canvas_nest(没有的在最后加）写true，下面的three_waves是另外的背景（注意能不能用最好打开注释的链接检查一下）；<br>配置layout.swing：这里一定要注意判断语句的判断条件，都将代码添加到文档body的开始处：<br>低版本的判断配置语句如下<br><code>% if theme.canvas_nest %</code><br>高版本的判断配置如下<br><code>% if theme.vendors.canvas_nest %</code><br>两个唯一区别就是判断条件是否加了决定是否加vendors,是否加这个要看主题配置文件下的vendors是否与canvas_nest对齐，若对齐，则不加；否则加。<br>完整的代码网上一搜就能找到，这里只强调易错的地方。<br></font> 
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/05/4-5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1508,181 +1683,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/25/1-25/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Flying Pig">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/25/1-25/" itemprop="url">1.25</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-25T20:39:27+08:00">
-                2018-01-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/行想-CQ/" itemprop="url" rel="index">
-                    <span itemprop="name">行想(CQ)</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  209
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<center><font size="5"><strong>Altium Design15拐角模式切换</strong></font>  </center>
-
-<font color="#000000" size="4">Altium Design15,在绘制原理图的时候，相信很多小伙伴都会遇到这样一个问题，快捷键：Shift+Space并没什么用，即使把键盘按坏，也没用，我就遇到这个问题了，经过一番摸索，终于解决了。解决办法如下：<br>选择你想要的线，点击鼠标左键，确定线的起点，然后拖动鼠标绘制线，在每个拐点都要点击确认，然后先点击Ctr+Shift+Space，这个时候再点击Shift+Space就可以自由切换拐角模式了。<br><img src="https://i.imgur.com/HayIBFP.png" alt=""><br>不多说了，帮人买一个小米5X手机，我得打开看看怎么样。<br><img src="https://i.imgur.com/jGubCnO.jpg" alt=""><br>放图为证，我是一个正经的人，不撒谎，也不吹牛。<br><br><img src="https://i.imgur.com/wuRbgye.jpg" alt=""><br>最后的最后，想说：祝你生日快乐！永远快乐！</font> 
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1737,7 +1737,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1787,7 +1787,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
