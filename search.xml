@@ -3,7 +3,10 @@
   <entry>
     <title><![CDATA[2020-3-17]]></title>
     <url>%2F2020%2F03%2F17%2F2020-3-17%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <content type="text"><![CDATA[MathType 在写论文的过程中，我们很难回避写公式的问题，或多或少我们都需要插入公式，使用word自带的公式编辑器也是一种办法，但是考虑到美观程度，我们往往会采用另一种方案，就是MathType编辑软件，作为Word的插件使用。 1.下载安装MathType MathType不止一种版本，我使用的是适用于Windows的MathType 6.9a, 里面利用破解软件生产序列号，输入即可，安装过程中中，一直点击Next，; 2.完美融入到 Word 中 这一步骤要注意文件位置，将MathType按照目录下的三个文件，分别如下图所示： 注意上面所示的文件位置，MathType所在目录默认为系统自动生产的位置，注意的是版本问题，是32为位还是64位，取决于你的office是多少位的，保持一致即可，如果不知道，可以选择32位，毕竟64位向下兼容32位，最好还是一致吧；找到上述三个文件，然后复制到如下目录。 正常情况下，再次打开word，即可，如果还不能显示，就在word-file-选项-如下图： 破解MathType 完成上述过程，得到的MathType功能并不完全，因此需要破解得到整个完整的功能，完整的功能可以将公式直接转成Latex脚步，破解很简单，首先，win+R；然后输入 regedit.exe；接着找到一级目录HKEY_CURRENT_USER下的Software目录，在该级目录里找到Install Options目录，删除注册列表中的第二项，红色框里指的那个option6.9文件，隔一段时间可能又需要删除一次；]]></content>
+      <tags>
+        <tag>技术</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Mon Dec 30 2019 00:00:00 GMT+0800 (中国标准时间)]]></title>
