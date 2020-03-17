@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
+    <title><![CDATA[2020-3-17]]></title>
+    <url>%2F2020%2F03%2F17%2F2020-3-17%2F</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Mon Dec 30 2019 00:00:00 GMT+0800 (中国标准时间)]]></title>
     <url>%2F2019%2F12%2F30%2F2019-12-30%2F</url>
     <content type="text"><![CDATA[论文 相信对于没有写过论文的同学，第一次写论文都比较痛苦，本人也没经验，只是将自己的踩过的坑整理一下，对自己而言记一下笔记，对他人而言也算是有些许的借鉴意义吧。 1.写作工具 主要就是word和Latex。word大家都熟悉，但是用好也不容易，最麻烦的就是图片以及公式大小的问题，尤其是导师改完之后，你又需要重新排版一下，所以前前后后花费时间也不少。而Latex恰恰相反，前期排版比较费时间，后面一旦完成框架，整个后面的修改就相对容易了。 latex最困难的地方就是表格和公式的制作。公式的制作我们可利用MathType 直接转换成latex脚本（只有完全破解的软件才可以使用等式脚本转换的功能），转换方法也比较多，我个人比较喜欢用的就是Convert Equations 这种方法，具体看以下截图： MathType 功能完全的方法 https://blog.csdn.net/u010158775/article/details/102977374 表格的制作也可以利用线上工具，我提供以下两个在线工具，生成的脚本还需要自己微调 https://tableconvert.com/?output=latex http://www.tablesgenerator.com/ 2.关于画图的问题 图在整个论文中非常重要，因此需要大家格外重视，画图软件非常多，类似 PPT, Visio, AI等等。不要说哪个更高档，适合的就是最好的。这里我想说的是画图大小的注意事项。我用的比较多的软件是Visio,图尽可能画得大一点，这样文字才可以设置太大，如果图太紧凑，字放不下，因此图之间的各个元件/素材要留有足够的空隙，电路的图的字体一般要大于等于16pt，线条粗细一般大于等于1.75磅，字体一般是Arial或者Calibri。 3.关于语法问题 这个真的看个人的英语水平以及阅读论文的数量了，看得少写得少的同学肯定需要一个磨练的过程，但是要注意自己基本的问题，如拼写问题，主语与谓语的统一问题，复数单数的问题，等等，推荐一个网址,帮助检查语法问题： https://app.grammarly.com 最后给一个ACM的example https://blog.csdn.net/qq_31813549/article/details/89154767 下面的链接是一个线上的Latex网址，好处就是不需要安装各种包，不好的地方就是运行不稳定 https://www.overleaf.com/]]></content>
       <categories>
